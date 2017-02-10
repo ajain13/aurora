@@ -80,7 +80,7 @@ public class AddTaskTest extends EasyMockTest {
         storageUtil.mutableStoreProvider,
         stateManager,
         JobUpdateStatus.ROLLING_FORWARD,
-            UPDATE_ID);
+        UPDATE_ID);
   }
 
   @Test
@@ -97,7 +97,7 @@ public class AddTaskTest extends EasyMockTest {
         storageUtil.mutableStoreProvider,
         stateManager,
         JobUpdateStatus.ROLLING_FORWARD,
-            UPDATE_ID);
+        UPDATE_ID);
   }
 
   @Test(expected = IllegalStateException.class)
@@ -112,6 +112,6 @@ public class AddTaskTest extends EasyMockTest {
         storageUtil.mutableStoreProvider,
         stateManager,
         JobUpdateStatus.ROLLING_BACK,
-            UPDATE_ID);
+        UPDATE_ID);
   }
 }

@@ -128,7 +128,7 @@ interface InstanceActionHandler {
             Tasks.id(task.get()),
             Optional.absent(),
             ScheduleStatus.KILLING,
-            Optional.of("Killed for job update : " + key.getId()));
+            Optional.of("Killed for job update " + key.getId()));
       } else {
         // Due to async event processing it's possible to have a race between task event
         // and it's deletion from the store. This is a perfectly valid case.

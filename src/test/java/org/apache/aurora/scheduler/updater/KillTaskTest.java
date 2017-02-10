@@ -73,8 +73,8 @@ public class KillTaskTest extends EasyMockTest {
         id,
         Optional.absent(),
         ScheduleStatus.KILLING,
-            Optional.of("Killed for job update : " + UPDATE_ID.getId())))
-                .andReturn(StateChangeResult.SUCCESS);
+        Optional.of("Killed for job update " + UPDATE_ID.getId())))
+            .andReturn(StateChangeResult.SUCCESS);
 
     control.replay();
 
@@ -84,7 +84,7 @@ public class KillTaskTest extends EasyMockTest {
         storageUtil.mutableStoreProvider,
         stateManager,
         JobUpdateStatus.ROLLING_BACK,
-            UPDATE_ID);
+        UPDATE_ID);
   }
 
   @Test
@@ -99,6 +99,6 @@ public class KillTaskTest extends EasyMockTest {
         storageUtil.mutableStoreProvider,
         stateManager,
         JobUpdateStatus.ROLLING_BACK,
-            UPDATE_ID);
+        UPDATE_ID);
   }
 }
